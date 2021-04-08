@@ -26,9 +26,9 @@ public class Osc {
         LineOut myOut = new LineOut();
         SineOscillator so;
 
-        double firstTone = Scale.calcInterval(15, 40);
-        double secondTone = Scale.calcInterval(21, 40);
-        double thirdTone = Scale.calcInterval(32, 40);
+        double firstTone = Scale.calcTeTInterval(15, 40);
+        double secondTone = Scale.calcTeTInterval(21, 40);
+        double thirdTone = Scale.calcTeTInterval(32, 40);
 
         /* 7, 12    5, 12
          *  19, 32   13, 32
