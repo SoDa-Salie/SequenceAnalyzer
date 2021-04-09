@@ -1,9 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.layout.AnchorPane?>
-<AnchorPane xmlns:fx="http://javafx.com/fxml"
-						xmlns="http://javafx.com/javafx"
-						fx:controller="com.sequenceanalyzer.view.MenuController"
-						prefHeight="400.0" prefWidth="600.0" >
-
-</AnchorPane >
+<?import javafx.scene.control.*?>
+<MenuBar xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/11.0.1"
+				 fx:controller="com.sequenceanalyzer.view.MenuController" >
+	<Menu mnemonicParsing="false" text="%menu.title.file" >
+		<MenuItem fx:id="fileMI1" mnemonicParsing="false" text="%menu.title.open" />
+		<MenuItem fx:id="fileMI2" mnemonicParsing="false" text="%menu.title.open_recent" />
+		<SeparatorMenuItem />
+		<MenuItem fx:id="fileMI3" mnemonicParsing="false" text="%menu.title.save" />
+		<MenuItem fx:id="fileMI4" mnemonicParsing="false" text="%menu.title.save_as" />
+		<SeparatorMenuItem />
+		<MenuItem fx:id="fileMI5" mnemonicParsing="false" text="%menu.title.preferences" />
+		<MenuItem fx:id="fileMI6" mnemonicParsing="false" text="%menu.title.quit" />
+	</Menu >
+	<Menu mnemonicParsing="false" text="%menu.title.edit" >
+		<MenuItem fx:id="editMI1" mnemonicParsing="false" text="%menu.title.undo" />
+		<MenuItem fx:id="editMI2" mnemonicParsing="false" text="%menu.title.redo" />
+		<SeparatorMenuItem />
+		<MenuItem fx:id="editMI3" mnemonicParsing="false" text="%menu.title.cut" />
+		<MenuItem fx:id="editMI4" mnemonicParsing="false" text="%menu.title.copy" />
+		<MenuItem fx:id="editMI5" mnemonicParsing="false" text="%menu.title.paste" />
+		<MenuItem fx:id="editMI6" mnemonicParsing="false" text="%menu.title.duplicate" />
+		<MenuItem fx:id="editMI7" mnemonicParsing="false" text="%menu.title.delete" />
+		<SeparatorMenuItem />
+		<MenuItem fx:id="editMI8" mnemonicParsing="false" text="%menu.title.select_all" />
+		<MenuItem fx:id="editMI9" mnemonicParsing="false" text="%menu.title.select_none" />
+	</Menu >
+	<Menu mnemonicParsing="false" text="%menu.title.insert" >
+		<MenuItem fx:id="insertMI1" mnemonicParsing="false" text="%menu.title.new_sequence" />
+		<MenuItem fx:id="insertMI2" mnemonicParsing="false" text="%menu.title.new_chord" />
+		<MenuItem fx:id="insertMI3" mnemonicParsing="false" text="%menu.title.chord_to_list" />
+	</Menu >
+	<Menu mnemonicParsing="false" text="%menu.title.help" >
+		<MenuItem fx:id="helpMI1" mnemonicParsing="false" text="%menu.title.about" />
+		<MenuItem fx:id="helpMI2" mnemonicParsing="false" text="%menu.title.updates" />
+		<MenuItem fx:id="helpMI3" mnemonicParsing="false" text="%menu.title.sequence.analyzer.help" />
+	</Menu >
+</MenuBar >
