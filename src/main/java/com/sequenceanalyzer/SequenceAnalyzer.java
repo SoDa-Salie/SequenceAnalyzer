@@ -7,12 +7,16 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
+import java.util.Locale;
+import java.util.ResourceBundle;
+
 public class SequenceAnalyzer extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception {
         FXMLLoader loader = new FXMLLoader();
-        loader.setLocation(getClass().getResource("layout.fxml"));
+        loader.setLocation(getClass().getResource("view/main_layout.fxml"));
+        loader.setResources(ResourceBundle.getBundle("com.sequenceanalyzer.i18n.SequenceAnalyzerApp", Locale.ENGLISH));
         Parent root = loader.load();
         Scene scene = new Scene(root);
         primaryStage.setTitle("SequenceAnalyzer");
