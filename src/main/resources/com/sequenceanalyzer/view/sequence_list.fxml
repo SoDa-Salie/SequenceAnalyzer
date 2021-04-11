@@ -1,9 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.layout.AnchorPane?>
-<AnchorPane xmlns="http://javafx.com/javafx"
-						xmlns:fx="http://javafx.com/fxml"
-						fx:controller="com.sequenceanalyzer.view.SequenceListController"
-						prefHeight="400.0" prefWidth="600.0" >
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
 
-</AnchorPane >
+<GridPane xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.sequenceanalyzer.view.SequenceListController">
+	<columnConstraints>
+		<ColumnConstraints />
+	</columnConstraints>
+
+	<rowConstraints>
+		<RowConstraints maxHeight="20.0" minHeight="20.0" prefHeight="20.0" />
+		<RowConstraints vgrow="SOMETIMES" />
+	</rowConstraints>
+
+	<AnchorPane maxHeight="20.0" minHeight="20.0" prefHeight="20.0" style="-fx-background-color: #cecdce;" GridPane.rowIndex="0">
+		<Label alignment="CENTER" layoutX="108.0" prefHeight="18.0" prefWidth="92.0" text="%label.sequence_list" AnchorPane.leftAnchor="108.0">
+			<padding>
+				<Insets top="1.0" />
+			</padding>
+		</Label>
+	</AnchorPane>
+
+	<ScrollPane GridPane.rowIndex="1">
+		<VBox>
+
+		</VBox>
+	</ScrollPane>
+</GridPane>

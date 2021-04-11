@@ -10,12 +10,7 @@ import com.sequenceanalyzer.model.data.Scale;
 
 public class Osc {
 
-    private Chord mChord;
     private Sequence mSequence;
-
-    public Osc(Chord chord) {
-        mChord = chord;
-    }
 
     public Osc(Sequence sequence) {
         mSequence = sequence;
@@ -26,14 +21,9 @@ public class Osc {
         LineOut myOut = new LineOut();
         SineOscillator so;
 
-        double firstTone = Scale.calcTeTInterval(15, 40);
-        double secondTone = Scale.calcTeTInterval(21, 40);
-        double thirdTone = Scale.calcTeTInterval(32, 40);
-
-        /* 7, 12    5, 12
-         *  19, 32   13, 32
-         *
-         * */
+        double firstTone = Scale.calcTeTInterval(5, 12);
+        double secondTone = Scale.calcTeTInterval(7, 12);
+        double thirdTone = Scale.calcTeTInterval(2, 12);
 
         synth.add(myOut);
         for (int i = 1; i < 25; i++) {

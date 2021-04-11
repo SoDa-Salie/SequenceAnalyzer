@@ -1,9 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.layout.AnchorPane?>
-<AnchorPane xmlns:fx="http://javafx.com/fxml"
-						xmlns="http://javafx.com/javafx"
-						fx:controller="com.sequenceanalyzer.view.ScaleSliderController"
-						prefHeight="400.0" prefWidth="600.0" >
 
-</AnchorPane >
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToolBar?>
+<ToolBar
+	xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/11.0.1"
+	fx:controller="com.sequenceanalyzer.view.ScaleSliderController"
+	style="-fx-border-color: transparent transparent transparent #858585;"
+	prefHeight="32"
+	maxHeight="32"
+	minHeight="32" >
+	<Label
+		text="%label.scale" />
+	<Slider
+		prefHeight="14.0"
+		prefWidth="120.0" />
+	<TextField
+		prefHeight="20.0"
+		minHeight="20.0"
+		maxHeight="20.0"
+		prefWidth="30.0"
+		minWidth="30.0"
+		maxWidth="30.0" />
+</ToolBar >

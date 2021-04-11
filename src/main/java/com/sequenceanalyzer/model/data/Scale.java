@@ -1,8 +1,47 @@
 package com.sequenceanalyzer.model.data;
 
+import javafx.util.Pair;
 import org.decimal4j.util.DoubleRounder;
 
+import java.lang.reflect.Field;
+import java.util.ArrayList;
+
 public class Scale {
+
+    private ArrayList<Pair<Integer, Integer>> currentScale;
+    private int scaleSize;
+    private static Scale instance;
+
+    private Scale(int scaleSize) {
+        this.scaleSize = scaleSize;
+        setCurrentScale(scaleSize);
+    }
+
+    public static Scale getInstance(int scaleSize) {
+        if(instance == null) instance = new Scale(scaleSize);
+        return instance;
+    }
+
+    public void setCurrentScale(int scaleSize) {
+        try {
+            int[][] retrievedScale = (int[][]) getClass().getField("NAT" + scaleSize).get(this);
+            currentScale = new ArrayList<>();
+            for(int i = 0; i <= retrievedScale.length; i++) {
+                currentScale.add(new Pair<>(retrievedScale[i][0], retrievedScale[i][1]));
+            }
+        } catch (NoSuchFieldException | IllegalAccessException e) {
+            e.printStackTrace();
+        }
+
+    }
+
+    public ArrayList<Pair<Integer, Integer>> getCurrentScale() {
+        return currentScale;
+    }
+
+    public int getScaleSize() {
+        return scaleSize;
+    }
 
     public static double calcTeTInterval(int scaleStep, int scaleSize) {
 
@@ -11,8 +50,6 @@ public class Scale {
 
         return DoubleRounder.round(Math.pow(2, (double)scaleStep/scaleSize), 12);
     }
-
-
 
     public static final int[][] NAT42 = {{1,1},{61,60},{31,30},{20,19},{16,15},{12,11},{10,9},{9,8},{8,7},{7,6},{20,17},{6,5},
             {11,9},{26,21},{5,4},{9,7},{13,10},{4,3},{35,26},{11,8},{7,5},{17,12},{10,7},{16,11},

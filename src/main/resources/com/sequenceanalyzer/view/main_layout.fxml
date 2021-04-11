@@ -6,20 +6,20 @@
 					prefWidth="1230.0"
 					xmlns="http://javafx.com/javafx/11.0.1"
 					fx:controller="com.sequenceanalyzer.view.MainLayoutController"
-					gridLinesVisible="false"
+					gridLinesVisible="true"
 					fx:id="main_grid" >
 	<!-- 20 Columns X 20 Rows -->
 	<columnConstraints >
-		<ColumnConstraints hgrow="SOMETIMES" minWidth="20.0" prefWidth="20.0" />
-		<ColumnConstraints hgrow="SOMETIMES" minWidth="20.0" prefWidth="20.0" />
-		<ColumnConstraints hgrow="SOMETIMES" minWidth="20.0" prefWidth="20.0" />
-		<ColumnConstraints hgrow="SOMETIMES" minWidth="20.0" prefWidth="20.0" />
-		<ColumnConstraints hgrow="SOMETIMES" minWidth="20.0" prefWidth="20.0" />
-		<ColumnConstraints hgrow="SOMETIMES" minWidth="20.0" prefWidth="20.0" />
-		<ColumnConstraints hgrow="SOMETIMES" minWidth="20.0" prefWidth="20.0" />
-		<ColumnConstraints hgrow="SOMETIMES" minWidth="20.0" prefWidth="20.0" />
-		<ColumnConstraints hgrow="SOMETIMES" minWidth="20.0" prefWidth="20.0" />
-		<ColumnConstraints hgrow="SOMETIMES" minWidth="20.0" prefWidth="20.0" />
+		<ColumnConstraints minWidth="20.0" prefWidth="20.0" />
+		<ColumnConstraints minWidth="20.0" prefWidth="20.0" />
+		<ColumnConstraints minWidth="20.0" prefWidth="20.0" />
+		<ColumnConstraints minWidth="20.0" prefWidth="20.0" />
+		<ColumnConstraints minWidth="20.0" prefWidth="20.0" />
+		<ColumnConstraints minWidth="20.0" prefWidth="20.0" />
+		<ColumnConstraints minWidth="20.0" prefWidth="20.0" />
+		<ColumnConstraints minWidth="20.0" prefWidth="20.0" />
+		<ColumnConstraints minWidth="20.0" prefWidth="20.0" />
+		<ColumnConstraints minWidth="20.0" prefWidth="20.0" />
 		<ColumnConstraints hgrow="SOMETIMES" minWidth="0" prefWidth="20.0" />
 		<ColumnConstraints hgrow="SOMETIMES" minWidth="0" prefWidth="20.0" />
 		<ColumnConstraints hgrow="SOMETIMES" minWidth="0" prefWidth="20.0" />
@@ -62,16 +62,16 @@
 		<ColumnConstraints hgrow="SOMETIMES" minWidth="0" prefWidth="20.0" />
 		<ColumnConstraints hgrow="SOMETIMES" minWidth="0" prefWidth="20.0" />
 		<ColumnConstraints hgrow="SOMETIMES" minWidth="0" prefWidth="20.0" />
-		<ColumnConstraints hgrow="SOMETIMES" minWidth="20.0" prefWidth="20.0" />
-		<ColumnConstraints hgrow="SOMETIMES" minWidth="20.0" prefWidth="20.0" />
-		<ColumnConstraints hgrow="SOMETIMES" minWidth="20.0" prefWidth="20.0" />
-		<ColumnConstraints hgrow="SOMETIMES" minWidth="20.0" prefWidth="20.0" />
-		<ColumnConstraints hgrow="SOMETIMES" minWidth="20.0" prefWidth="20.0" />
-		<ColumnConstraints hgrow="SOMETIMES" minWidth="20.0" prefWidth="20.0" />
-		<ColumnConstraints hgrow="SOMETIMES" minWidth="20.0" prefWidth="20.0" />
-		<ColumnConstraints hgrow="SOMETIMES" minWidth="20.0" prefWidth="20.0" />
-		<ColumnConstraints hgrow="SOMETIMES" minWidth="20.0" prefWidth="20.0" />
-		<ColumnConstraints hgrow="SOMETIMES" minWidth="20.0" prefWidth="20.0" />
+		<ColumnConstraints minWidth="20.0" prefWidth="20.0" />
+		<ColumnConstraints minWidth="20.0" prefWidth="20.0" />
+		<ColumnConstraints minWidth="20.0" prefWidth="20.0" />
+		<ColumnConstraints minWidth="20.0" prefWidth="20.0" />
+		<ColumnConstraints minWidth="20.0" prefWidth="20.0" />
+		<ColumnConstraints minWidth="20.0" prefWidth="20.0" />
+		<ColumnConstraints minWidth="20.0" prefWidth="20.0" />
+		<ColumnConstraints minWidth="20.0" prefWidth="20.0" />
+		<ColumnConstraints minWidth="20.0" prefWidth="20.0" />
+		<ColumnConstraints minWidth="20.0" prefWidth="20.0" />
 	</columnConstraints >
 	<rowConstraints >
 		<RowConstraints />
@@ -124,4 +124,32 @@
 		GridPane.columnSpan="40"
 		GridPane.halignment="CENTER"
 		GridPane.valignment="CENTER" />
+
+	<fx:include
+		fx:id="chord_list"
+		source="chord_list.fxml"
+		GridPane.columnIndex="0"
+		GridPane.columnSpan="10"
+		GridPane.rowIndex="1"
+		GridPane.rowSpan="29"
+		GridPane.halignment="CENTER"
+		GridPane.valignment="CENTER" />
+
+	<fx:include
+		fx:id="scale_slider"
+		source="scale_slider.fxml"
+		GridPane.columnIndex="50"
+		GridPane.rowIndex="1"
+		GridPane.columnSpan="10" />
+
+	<fx:include
+		fx:id="sequence_list"
+		source="sequence_list.fxml"
+		GridPane.columnIndex="50"
+		GridPane.rowIndex="2"
+		GridPane.columnSpan="10"
+		GridPane.rowSpan="28"
+		GridPane.halignment="CENTER"
+		GridPane.valignment="CENTER"/>
+
 </GridPane >
