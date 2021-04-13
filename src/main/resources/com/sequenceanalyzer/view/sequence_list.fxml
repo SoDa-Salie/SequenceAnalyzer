@@ -22,7 +22,7 @@
 		</Label>
 	</AnchorPane>
 
-	<ScrollPane GridPane.rowIndex="1">
+	<ScrollPane GridPane.rowIndex="1" fitToHeight="true" fitToWidth="true">
 		<VBox>
 
 		</VBox>

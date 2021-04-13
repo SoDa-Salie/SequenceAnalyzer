@@ -10,21 +10,18 @@
 	</columnConstraints>
 
 	<rowConstraints>
-		<RowConstraints maxHeight="32" minHeight="32" prefHeight="32"/>
+		<RowConstraints maxHeight="32" minHeight="32" prefHeight="32" />
 		<RowConstraints minHeight="20.0" prefHeight="20.0" />
 		<RowConstraints vgrow="SOMETIMES" />
 	</rowConstraints>
 
-	<ToolBar maxHeight="32" minHeight="32" prefHeight="32"
-					 style="-fx-border-color: transparent #858585 transparent transparent;"
-					 GridPane.halignment="LEFT" GridPane.valignment="TOP">
+	<ToolBar maxHeight="32" minHeight="32" prefHeight="32" style="-fx-border-color: transparent #858585 transparent transparent;" GridPane.halignment="LEFT" GridPane.valignment="TOP">
 		<Label text="%label.select" />
-		<TextField maxHeight="20.0" maxWidth="155.0" minHeight="20.0" minWidth="155.0" prefHeight="20.0" prefWidth="155.0" />
+		<TextField maxHeight="20.0" maxWidth="150.0" minHeight="20.0" minWidth="150.0" prefHeight="20.0"
+							 prefWidth="150.0" />
 	</ToolBar>
 
-	<AnchorPane maxHeight="20.0" minHeight="20.0" prefHeight="20.0"
-							style="-fx-background-color: #cecdce;"
-							GridPane.rowIndex="1">
+	<AnchorPane maxHeight="20.0" minHeight="20.0" prefHeight="20.0" style="-fx-background-color: #cecdce;" GridPane.rowIndex="1">
 		<Label alignment="CENTER" layoutX="130.0" prefHeight="18.0" prefWidth="70.0" text="%label.chord_list" AnchorPane.leftAnchor="130.0">
 			<padding>
 				<Insets top="1.0" />
@@ -32,7 +29,7 @@
 		</Label>
 	</AnchorPane>
 
-	<ScrollPane GridPane.rowIndex="2">
+	<ScrollPane GridPane.rowIndex="2" fitToWidth="true" fitToHeight="true">
 		<VBox>
 
 		</VBox>

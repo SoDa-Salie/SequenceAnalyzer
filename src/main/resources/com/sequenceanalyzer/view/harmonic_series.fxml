@@ -1,9 +1,141 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.layout.AnchorPane?>
-<AnchorPane xmlns:fx="http://javafx.com/fxml"
-						xmlns="http://javafx.com/javafx"
-						fx:controller="com.sequenceanalyzer.view.HarmonicSeriesController"
-						prefHeight="400.0" prefWidth="600.0" >
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
 
-</AnchorPane >
+<?import javafx.scene.Group?>
+<GridPane alignment="CENTER" gridLinesVisible="false" hgap="5.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.sequenceanalyzer.view.HarmonicSeriesController">
+	<columnConstraints>
+		<ColumnConstraints maxWidth="20.0" minWidth="20.0" prefWidth="20.0" />
+		<ColumnConstraints halignment="CENTER" maxWidth="22.0" minWidth="22.0" prefWidth="22.0" />
+		<ColumnConstraints halignment="CENTER" maxWidth="22.0" minWidth="22.0" prefWidth="22.0" />
+		<ColumnConstraints halignment="CENTER" maxWidth="22.0" minWidth="22.0" prefWidth="22.0" />
+		<ColumnConstraints halignment="CENTER" maxWidth="22.0" minWidth="22.0" prefWidth="22.0" />
+		<ColumnConstraints halignment="CENTER" maxWidth="22.0" minWidth="22.0" prefWidth="22.0" />
+		<ColumnConstraints halignment="CENTER" maxWidth="22.0" minWidth="22.0" prefWidth="22.0" />
+		<ColumnConstraints halignment="CENTER" maxWidth="22.0" minWidth="22.0" prefWidth="22.0" />
+		<ColumnConstraints halignment="CENTER" maxWidth="22.0" minWidth="22.0" prefWidth="22.0" />
+		<ColumnConstraints halignment="CENTER" maxWidth="22.0" minWidth="22.0" prefWidth="22.0" />
+		<ColumnConstraints halignment="CENTER" maxWidth="22.0" minWidth="22.0" prefWidth="22.0" />
+		<ColumnConstraints halignment="CENTER" maxWidth="22.0" minWidth="22.0" prefWidth="22.0" />
+		<ColumnConstraints halignment="CENTER" maxWidth="22.0" minWidth="22.0" prefWidth="22.0" />
+		<ColumnConstraints halignment="CENTER" maxWidth="22.0" minWidth="22.0" prefWidth="22.0" />
+		<ColumnConstraints halignment="CENTER" maxWidth="22.0" minWidth="22.0" prefWidth="22.0" />
+		<ColumnConstraints halignment="CENTER" maxWidth="22.0" minWidth="22.0" prefWidth="22.0" />
+		<ColumnConstraints halignment="CENTER" maxWidth="22.0" minWidth="22.0" prefWidth="22.0" />
+		<ColumnConstraints halignment="CENTER" maxWidth="22.0" minWidth="22.0" prefWidth="22.0" />
+		<ColumnConstraints halignment="CENTER" maxWidth="22.0" minWidth="22.0" prefWidth="22.0" />
+		<ColumnConstraints halignment="CENTER" maxWidth="22.0" minWidth="22.0" prefWidth="22.0" />
+		<ColumnConstraints halignment="CENTER" maxWidth="22.0" minWidth="22.0" prefWidth="22.0" />
+		<ColumnConstraints halignment="CENTER" maxWidth="22.0" minWidth="22.0" prefWidth="22.0" />
+		<ColumnConstraints halignment="CENTER" maxWidth="22.0" minWidth="22.0" prefWidth="22.0" />
+		<ColumnConstraints halignment="CENTER" maxWidth="22.0" minWidth="22.0" prefWidth="22.0" />
+		<ColumnConstraints halignment="CENTER" maxWidth="22.0" minWidth="22.0" prefWidth="22.0" />
+		<ColumnConstraints halignment="CENTER" maxWidth="22.0" minWidth="22.0" prefWidth="22.0" />
+		<ColumnConstraints maxWidth="20.0" minWidth="20.0" prefWidth="20.0" />
+	</columnConstraints>
+	<rowConstraints>
+		<RowConstraints maxHeight="12.0" minHeight="12.0" prefHeight="12.0" />
+		<RowConstraints maxHeight="12.0" minHeight="12.0" prefHeight="12.0" />
+		<RowConstraints maxHeight="12.0" minHeight="12.0" prefHeight="12.0" />
+		<RowConstraints maxHeight="12.0" minHeight="12.0" prefHeight="12.0" />
+		<RowConstraints maxHeight="12.0" minHeight="12.0" prefHeight="12.0" />
+		<RowConstraints maxHeight="12.0" minHeight="12.0" prefHeight="12.0" />
+		<RowConstraints maxHeight="12.0" minHeight="12.0" prefHeight="12.0" />
+		<RowConstraints maxHeight="12.0" minHeight="12.0" prefHeight="12.0" />
+		<RowConstraints maxHeight="12.0" minHeight="12.0" prefHeight="12.0" />
+		<RowConstraints maxHeight="12.0" minHeight="12.0" prefHeight="12.0" />
+		<RowConstraints maxHeight="12.0" minHeight="12.0" prefHeight="12.0" />
+		<RowConstraints maxHeight="12.0" minHeight="12.0" prefHeight="12.0" />
+		<RowConstraints maxHeight="12.0" minHeight="12.0" prefHeight="12.0" />
+		<RowConstraints maxHeight="20.0" minHeight="20.0" prefHeight="20.0" />
+		<RowConstraints maxHeight="20.0" minHeight="20.0" prefHeight="20.0" />
+	</rowConstraints>
+	<children>
+		<Rectangle arcHeight="5.0" arcWidth="5.0" fill="#92c4f0" height="11.0" stroke="BLACK" strokeType="INSIDE" width="720.0" GridPane.columnSpan="27" GridPane.rowIndex="13" />
+
+		<Label text="1" GridPane.columnIndex="1" GridPane.rowIndex="14" />
+		<Label text="2" GridPane.columnIndex="2" GridPane.rowIndex="14" />
+		<Label text="3" GridPane.columnIndex="3" GridPane.rowIndex="14" />
+		<Label text="4" GridPane.columnIndex="4" GridPane.rowIndex="14" />
+		<Label text="5" GridPane.columnIndex="5" GridPane.rowIndex="14" />
+		<Label text="6" GridPane.columnIndex="6" GridPane.rowIndex="14" />
+		<Label text="7" GridPane.columnIndex="7" GridPane.rowIndex="14" />
+		<Label text="8" GridPane.columnIndex="8" GridPane.rowIndex="14" />
+		<Label text="9" GridPane.columnIndex="9" GridPane.rowIndex="14" />
+		<Label text="10" GridPane.columnIndex="10" GridPane.rowIndex="14" />
+		<Label text="11" GridPane.columnIndex="11" GridPane.rowIndex="14" />
+		<Label text="12" GridPane.columnIndex="12" GridPane.rowIndex="14" />
+		<Label text="13" GridPane.columnIndex="13" GridPane.rowIndex="14" />
+		<Label text="14" GridPane.columnIndex="14" GridPane.rowIndex="14" />
+		<Label text="15" GridPane.columnIndex="15" GridPane.rowIndex="14" />
+		<Label text="16" GridPane.columnIndex="16" GridPane.rowIndex="14" />
+		<Label text="17" GridPane.columnIndex="17" GridPane.rowIndex="14" />
+		<Label text="18" GridPane.columnIndex="18" GridPane.rowIndex="14" />
+		<Label text="19" GridPane.columnIndex="19" GridPane.rowIndex="14" />
+		<Label text="20" GridPane.columnIndex="20" GridPane.rowIndex="14" />
+		<Label text="21" GridPane.columnIndex="21" GridPane.rowIndex="14" />
+		<Label text="22" GridPane.columnIndex="22" GridPane.rowIndex="14" />
+		<Label text="23" GridPane.columnIndex="23" GridPane.rowIndex="14" />
+		<Label text="24" GridPane.columnIndex="24" GridPane.rowIndex="14" />
+		<Label text="25" GridPane.columnIndex="25" GridPane.rowIndex="14" />
+
+
+		<Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #cecdce;" GridPane.columnIndex="1"
+						GridPane.rowIndex="12" />
+		<Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #cecdce;" GridPane.columnIndex="1"
+						GridPane.rowIndex="11" />
+		<Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #cecdce;" GridPane.columnIndex="1"
+						GridPane.rowIndex="10" />
+		<Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #cecdce;" GridPane.columnIndex="1"
+						GridPane.rowIndex="9" />
+		<Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #cecdce;" GridPane.columnIndex="1"
+						GridPane.rowIndex="8" />
+		<Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #cecdce;" GridPane.columnIndex="1"
+						GridPane.rowIndex="7" />
+		<Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #cecdce;" GridPane.columnIndex="1"
+						GridPane.rowIndex="6" />
+		<Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #cecdce;" GridPane.columnIndex="1"
+						GridPane.rowIndex="5" />
+		<Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #cecdce;" GridPane.columnIndex="1"
+						GridPane.rowIndex="4" />
+		<Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #cecdce;" GridPane.columnIndex="1"
+						GridPane.rowIndex="3" />
+		<Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #cecdce;" GridPane.columnIndex="1"
+						GridPane.rowIndex="2" />
+		<Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #cecdce;" GridPane.columnIndex="1"
+						GridPane.rowIndex="1" />
+		<Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #cecdce;" GridPane.columnIndex="1"
+						GridPane.rowIndex="0" />
+
+		<Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #cecdce;" GridPane.columnIndex="2"
+						GridPane.rowIndex="12" />
+		<Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #cecdce;" GridPane.columnIndex="2"
+						GridPane.rowIndex="11" />
+		<Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #cecdce;" GridPane.columnIndex="2"
+						GridPane.rowIndex="10" />
+		<Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #cecdce;" GridPane.columnIndex="2"
+						GridPane.rowIndex="9" />
+		<Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #cecdce;" GridPane.columnIndex="2"
+						GridPane.rowIndex="8" />
+		<Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #cecdce;" GridPane.columnIndex="2"
+						GridPane.rowIndex="7" />
+		<Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #cecdce;" GridPane.columnIndex="2"
+						GridPane.rowIndex="6" />
+		<Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #cecdce;" GridPane.columnIndex="2"
+						GridPane.rowIndex="5" />
+		<Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #cecdce;" GridPane.columnIndex="2"
+						GridPane.rowIndex="4" />
+		<Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #cecdce;" GridPane.columnIndex="2"
+						GridPane.rowIndex="3" />
+		<Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #cecdce;" GridPane.columnIndex="2"
+						GridPane.rowIndex="2" />
+		<Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #cecdce;" GridPane.columnIndex="2"
+						GridPane.rowIndex="1" />
+		<Region prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #cecdce;" GridPane.columnIndex="2"
+						GridPane.rowIndex="0" />
+
+
+	</children>
+</GridPane>
