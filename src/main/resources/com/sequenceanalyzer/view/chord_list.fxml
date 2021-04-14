@@ -15,7 +15,10 @@
 		<RowConstraints vgrow="SOMETIMES" />
 	</rowConstraints>
 
-	<ToolBar maxHeight="32" minHeight="32" prefHeight="32" style="-fx-border-color: transparent #858585 transparent transparent;" GridPane.halignment="LEFT" GridPane.valignment="TOP">
+	<ToolBar maxHeight="32" minHeight="32" prefHeight="32"
+					 style="-fx-border-color: transparent #858585 transparent transparent;"
+					 GridPane.halignment="LEFT"
+					 GridPane.valignment="TOP">
 		<Label text="%label.select" />
 		<TextField maxHeight="20.0" maxWidth="150.0" minHeight="20.0" minWidth="150.0" prefHeight="20.0"
 							 prefWidth="150.0" />
