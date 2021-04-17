@@ -1,54 +1,113 @@
 package com.sequenceanalyzer.model.data;
 
+import com.sequenceanalyzer.model.Chord;
+import com.sequenceanalyzer.model.ProjectImpl;
+import com.sequenceanalyzer.model.Tone;
 import javafx.util.Pair;
 import org.decimal4j.util.DoubleRounder;
 
-import java.lang.reflect.Field;
 import java.util.ArrayList;
 
 public class Scale {
 
-    private ArrayList<Pair<Integer, Integer>> currentScale;
-    private int scaleSize;
-    private static Scale instance;
+    private ArrayList<Pair<Integer, Integer>> mScaleArray;
+    private ArrayList<Pair<Integer, Integer>> mScaleArrayOpposite;
+    private int mScaleSize;
+    private static Scale mCurrentScale;
 
     private Scale(int scaleSize) {
-        this.scaleSize = scaleSize;
-        setCurrentScale(scaleSize);
+        this.mScaleSize = scaleSize;
+        setScaleArray(scaleSize);
     }
 
     public static Scale getInstance(int scaleSize) {
-        if(instance == null) instance = new Scale(scaleSize);
-        return instance;
+        ProjectImpl project = ProjectImpl.getInstance();
+        if(mCurrentScale == null) {
+            mCurrentScale = new Scale(scaleSize);
+            project.setCurrentScale(mCurrentScale);
+            return mCurrentScale;
+        } else if(mCurrentScale.mScaleSize != scaleSize){
+            mCurrentScale.mScaleSize = scaleSize;
+            mCurrentScale.setScaleArray(scaleSize);
+            project.setCurrentScale(mCurrentScale);
+        } return mCurrentScale;
     }
 
-    public void setCurrentScale(int scaleSize) {
+    public void setScaleArray(int scaleSize) {
         try {
             int[][] retrievedScale = (int[][]) getClass().getField("NAT" + scaleSize).get(this);
-            currentScale = new ArrayList<>();
+            mScaleArray = new ArrayList<>();
+            mScaleArrayOpposite = new ArrayList<>();
             for(int i = 0; i <= retrievedScale.length; i++) {
-                currentScale.add(new Pair<>(retrievedScale[i][0], retrievedScale[i][1]));
+                mScaleArray.add(new Pair<>(retrievedScale[i][0], retrievedScale[i][1]));
+                mScaleArrayOpposite.add(new Pair<>(retrievedScale[i][1], retrievedScale[i][0]));
             }
         } catch (NoSuchFieldException | IllegalAccessException e) {
             e.printStackTrace();
         }
-
     }
 
-    public ArrayList<Pair<Integer, Integer>> getCurrentScale() {
-        return currentScale;
+    public ArrayList<Pair<Integer, Integer>> getScaleArray() {
+        return mScaleArray;
+    }
+
+    public ArrayList<Pair<Integer, Integer>> getScaleArrayOpposite() {
+        return mScaleArrayOpposite;
     }
 
     public int getScaleSize() {
-        return scaleSize;
+        return mScaleSize;
     }
 
-    public static double calcTeTInterval(int scaleStep, int scaleSize) {
+    public Pair<Integer, Integer> getNatInterval(Tone tone) {
+        int scaleStep = tone.getScaleStep();
+        if(scaleStep >= 0) return mScaleArray.get(scaleStep);
+        else return mScaleArrayOpposite.get(scaleStep * (-1));
+    }
 
-        if (scaleSize > 43) scaleSize = 43;
-        else if (scaleSize < 12) scaleSize = 12;
+    public Pair<Integer, Integer> getNatIntervalRelToSequence(Tone tone) {
+        int scaleStep = tone.getScaleStepRelToSequence();
+        int octaves = calcOctavesInInterval(tone);
+        int remainingStep = Math.abs(scaleStep) - getScaleSize() * octaves;
+        Pair<Integer, Integer> interval;
 
-        return DoubleRounder.round(Math.pow(2, (double)scaleStep/scaleSize), 12);
+        if(scaleStep > 0) {
+            interval = getScaleArray().get(remainingStep);
+            for(int i = 1; i <= octaves; i++) {
+                interval = new Pair<>(interval.getKey() * 2, interval.getValue());
+            }
+            if(interval.getKey() % interval.getValue() == 0) {
+                interval = new Pair<>(
+                        interval.getKey() / interval.getValue(),
+                        interval.getValue() / interval.getValue()
+                );
+            } return interval;
+        } else if (scaleStep < 0) {
+            interval = getScaleArrayOpposite().get(remainingStep);
+            for(int i = 1; i <= octaves; i++) {
+                interval = new Pair<>(interval.getValue() * 2, interval.getKey());
+            }
+            if(interval.getValue() % interval.getKey() == 0) {
+                interval = new Pair<>(
+                        interval.getKey() / interval.getKey(),
+                        interval.getValue() / interval.getKey()
+                );
+            } return interval;
+        } else return interval = getNatInterval(tone);
+    }
+
+    public double calcTeTInterval(Tone tone) {
+        return DoubleRounder.round(Math.pow(2, (double)tone.getScaleStep() / mScaleSize), 12);
+    }
+
+    public int calcOctavesInInterval(Tone tone) {
+        return Math.abs(tone.getScaleStepRelToSequence() / getScaleSize());
+    }
+
+    public int calcOctavesInInterval(Chord chord) {
+        return Math.abs(chord.getLastTone().getScaleStepRelToSequence()
+                - chord.getTone(1).getScaleStepRelToSequence()
+                / getScaleSize());
     }
 
     public static final int[][] NAT42 = {{1,1},{61,60},{31,30},{20,19},{16,15},{12,11},{10,9},{9,8},{8,7},{7,6},{20,17},{6,5},

@@ -22,7 +22,6 @@ public class SequenceAnalyzer extends Application {
         primaryStage.setTitle("SequenceAnalyzer");
         primaryStage.setScene(scene);
         primaryStage.show();
-        Osc.start();
     }
 
     public static void main(String[] args) {

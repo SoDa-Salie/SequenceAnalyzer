@@ -163,5 +163,4 @@
 	<fx:include fx:id="sequence_list" source="sequence_list.fxml" GridPane.columnIndex="50" GridPane.columnSpan="10"
 							GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.rowSpan="28" GridPane.valignment="CENTER" />
 
-
 </GridPane >

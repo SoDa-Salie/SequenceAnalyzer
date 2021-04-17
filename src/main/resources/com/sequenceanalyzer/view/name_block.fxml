@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.*?>
-<?import javafx.scene.image.*?>
-<?import javafx.scene.layout.*?>
-
-<ToolBar maxHeight="32" minHeight="32" prefHeight="32" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.sequenceanalyzer.view.NameBlockController">
-	<Button maxHeight="20.0" maxWidth="20.0" minHeight="20.0" minWidth="20.0" mnemonicParsing="false" prefHeight="20.0" prefWidth="20.0">
-		<graphic>
-			<ImageView fitHeight="12.0" fitWidth="12.0" pickOnBounds="true" preserveRatio="true">
-				<image>
-					<Image url="@../img/play.png" />
-				</image>
-			</ImageView>
-		</graphic>
-	</Button>
-	<Button maxHeight="20.0" maxWidth="20.0" minHeight="20.0" minWidth="20.0" mnemonicParsing="false" prefHeight="20.0" prefWidth="20.0">
-		<graphic>
-			<ImageView fitHeight="12.0" fitWidth="12.0" pickOnBounds="true" preserveRatio="true">
-				<image>
-					<Image url="@../img/stop.png" />
-				</image>
-			</ImageView>
-		</graphic>
-	</Button>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<ToolBar
+	xmlns:fx="http://javafx.com/fxml/1" maxHeight="32" minHeight="32" prefHeight="32"
+	xmlns="http://javafx.com/javafx/11.0.1" fx:controller="com.sequenceanalyzer.view.NameBlockController" >
+	<Button fx:id="playAndStop"
+					onMouseClicked="#play"
+					maxHeight="20.0"
+					maxWidth="20.0"
+					minHeight="20.0"
+					minWidth="20.0"
+					mnemonicParsing="false"
+					prefHeight="20.0"
+					prefWidth="20.0" >
+		<graphic >
+			<ImageView fitHeight="12.0" fitWidth="12.0" pickOnBounds="true" preserveRatio="true" >
+				<Image url="@../img/play.png" />
+			</ImageView >
+		</graphic >
+	</Button >
 	<Label fx:id="project_name" alignment="CENTER" text="%label.untitled" />
-</ToolBar>
+</ToolBar >

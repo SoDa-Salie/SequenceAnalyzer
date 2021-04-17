@@ -5,21 +5,25 @@ import javafx.util.Pair;
 
 public class Tone {
 
-    private final double intervalTeT;
-    private final int intervalNatNumerator;
-    private final int intervalNatDenominator;
-    private int stepInChord;
-    private int scaleStep;
+    private int mScaleStepRelToSequence;
+    private int mStepInChord;
+    private int mScaleStep;
 
-    public Tone(Scale scale, int scaleStep) {
-        Pair<Integer, Integer> intervalPair = getIntervalPairFromScale(scale, scaleStep);
-        intervalNatNumerator = intervalPair.getKey();
-        intervalNatDenominator = intervalPair.getValue();
-        intervalTeT = Scale.calcTeTInterval(scaleStep, scale.getScaleSize());
-        this.scaleStep = scaleStep;
+    public Tone(int scaleStep, int stepInChord, int scaleStepRelToSequence) {
+        mScaleStepRelToSequence = scaleStepRelToSequence;
+        mStepInChord = stepInChord;
+        mScaleStep = scaleStep;
     }
 
-    private Pair<Integer, Integer> getIntervalPairFromScale(Scale scale, int scaleStep) {
-        return scale.getCurrentScale().get(scaleStep);
+    public int getStepInChord() {
+        return mStepInChord;
+    }
+
+    public int getScaleStep() {
+        return mScaleStep;
+    }
+
+    public int getScaleStepRelToSequence() {
+        return mScaleStepRelToSequence;
     }
 }
